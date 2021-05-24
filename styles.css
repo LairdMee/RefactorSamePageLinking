@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    font-family: open-sans;
+    font-size: 20px;
+    background-color: maroon;
+}
+
+h1, h2, h3 {
+    font-family: 'Limelight', cursive;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+}
+
+h1 {
+        border: 15px dotted white;
+}
+
+a {
+    padding: 10px;
+}
+
+.all-products {
+    display: flex;
+    flex-direction: row; 
+    padding: 10px;
+    justify-content: center;
+}
+
+.image {
+    padding: 15px;
+
+    height: 350px;
+}
+#image1{
+    height: 380px;
+}
+ .back1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    float: right;
+} 
+
+
+
+/* basic menu styles */
+.block-menu {
+    display: block;
+    background: #000;
+}
+
+.block-menu li {
+    display: inline-block;
+}
+
+.block-menu li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-family: 'Passion One', Arial, sans-serif;
+    font-smoothing: antialiased;
+    text-transform: uppercase;
+    overflow: visible;
+    line-height: 20px;
+    font-size: 24px;
+    padding: 15px 10px;
+}
+
+/* animation domination */
+.three-d {
+    perspective: 200px;
+    transition: all .07s linear;
+    position: relative;
+    cursor: pointer;
+}
+    /* complete the animation! */
+    .three-d:hover .three-d-box, 
+    .three-d:focus .three-d-box {
+        transform: translateZ(-25px) rotateX(90deg);
+    }
+
+.three-d-box {
+    transition: all .3s ease-out;
+    transform: translatez(-25px);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+    put the "front" and "back" elements into place with CSS transforms, 
+    specifically translation and translatez
+*/
+.front {
+    transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+    transform: rotatex(-90deg) translatez(25px);
+    color: #ffe7c4;
+}
+
+.front, .back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    padding: 15px 10px;
+    color: white;
+    pointer-events: none;
+    box-sizing: border-box;
+}
